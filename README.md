@@ -68,6 +68,12 @@ $$\tau:$$ Joint Torques;\
 $$K_p \approx 10, K_d \approx 1.0$$: PD gains (feel free to adjust);\
 $$X$$: Joint positions (real and desired); $$\dot{X}$$: Joint velocities (real and desired)
 ## Robot Dog Walking
-Finally using your working PD controller, think about the steps needed to do the motions for walking and implement them in your control loop as a function of time. It does not need to be perfect (and most certainly wont because of the open loop nature) and just needs to demonstrate forward locomotion. The requirements for forward locomotion is a mean forward velocity >0.20 m/s and a mean lateral velocity no greater than 0.10 m/s at all times. The base velocity in world frame can be derived from data.qvel
+Finally using your working PD controller, think about the steps needed to do the motions for walking and implement them in your control loop as a function of time. It does not need to be perfect (and most certainly wont because of the open loop nature) and just needs to demonstrate forward locomotion. The requirements for forward locomotion is a mean forward velocity >0.20 m/s and a mean lateral velocity no greater than 0.10 m/s at all times. The base velocity in world frame can be derived from ```data.qvel```
 # Submission
 DM the software lead **Ludwig Tay** on discord once you are done for review of submission.
+
+# Extra Credit
+One area of interest in robotics is Reinforcement Learning control. Reinforcement Learning is used to learn a policy network that takes observations (a vector) from sensor input and outputs action, a joint position target for the PD controller. While RL is very important in robotics, learning about it is not so straightforward, especially many topics in RL is still poorly understood. For this extra credit task, through self study and ingenuity:
+1) Run the [mujoco playground](https://github.com/google-deepmind/mujoco_playground/tree) locomotion training script in google colab (free tier should be sufficient for the Go1 Task), try to read into the code to understand how it works.
+2) Using the mujoco xml dog created earlier, create your own repo and using mujoco playground, train a walking policy for the robot dog. Study how ```mujoco_playground/_src/locomotion/go1``` registers an environment for training.
+3) Submit the repo and demonstrate the walking policy on your own robot dog.
