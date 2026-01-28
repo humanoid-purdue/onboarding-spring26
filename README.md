@@ -58,6 +58,7 @@ The state of the simulation (including all the joint positions) is printed out t
 Create a public repo on your personal github to submit all your work. You will be submitting a github link to your public repo containing all the code for your dog.
 ## Robot Dog Dimensions
 ![dog](dog_dims.jpg)
+\
 Create a mujoco xml that creates a robot similar to the one displayed here. Implement each joint with <motor> actuator with a maximum torque of 20 Nm. **Do not use mujoco's prebuilt position actuators**.
 ## Robot Dog Simulation Loop
 Write a simulation loop similar to visualize_snake.py that loads the robot dog into a simulation gui.
