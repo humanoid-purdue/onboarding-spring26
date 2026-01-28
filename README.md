@@ -64,7 +64,9 @@ Write a simulation loop similar to visualize_snake.py that loads the robot dog i
 ## Robot Dog Controller
 Controlling joint torques is unintuitive for the programmer. One way to move from the complicated task of controlling through torque to something like controlling through position is through a joint controller. Implement a PD controller in your control loop using qpos and qvel. Control torque is determined by:\
 $$\tau = K_p (X_{des} - X) + K_d (\dot{X}_{des} - \dot{X})$$\
-$$\tau:$$ Joint Torques; $$K_p \approx 10, K_d \approx 1.0$$: PD gains, feel free to adjust; $$X$$: Joint positions (real and desired); $$\dot{X}$$: Joint velocities (real and desired)
+$$\tau:$$ Joint Torques;\
+$$K_p \approx 10, K_d \approx 1.0$$: PD gains (feel free to adjust);\
+$$X$$: Joint positions (real and desired); $$\dot{X}$$: Joint velocities (real and desired)
 ## Robot Dog Walking
 Finally using your working PD controller, think about the steps needed to do the motions for walking and implement them in your control loop as a function of time. It does not need to be perfect (and most certainly wont because of the open loop nature) and just needs to demonstrate forward locomotion. The requirements for forward locomotion is a mean forward velocity >0.20 m/s and a mean lateral velocity no greater than 0.10 m/s at all times. The base velocity in world frame can be derived from data.qvel
 # Submission
